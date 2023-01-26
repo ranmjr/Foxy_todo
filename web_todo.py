@@ -33,6 +33,11 @@ st.text_input(label="", placeholder="Add a new task...",
 
 st.write("\n\n\n")
 
+if st.button("Play the foxy tune", key="tune"):
+    st.audio("fox_todo.mp3")
+
+st.write("\n\n\n")
+
 if st.button("Generate a random foxy quote", key="quote"):
     fox_quote = st.empty()
     fox_quote.subheader(':blue["]' + f":blue[{functions.get_quote()}]" + ':blue["]')

@@ -31,6 +31,8 @@ for index, todo in enumerate(todos):
 st.text_input(label="", placeholder="Add a new task...",
               on_change=add_todo, key="new_todo")
 
+st.write("\n\n\n")
+
 if st.button("Generate a random foxy quote", key="quote"):
     fox_quote = st.empty()
     fox_quote.subheader(':blue["]' + f":blue[{functions.get_quote()}]" + ':blue["]')

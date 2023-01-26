@@ -9,10 +9,15 @@ def add_todo():
     todo = st.session_state["new_todo"] + "\n"
     todos.append(todo)
     functions.write_todos(todos)
+    st.session_state["new_todo"] = ""
+
+st.image("foxy_icon.PNG")
+st.write("\n\n\n")
 
 st.title("Foxy todo list")
 st.subheader("The original foxy productivity app")
-st.write("")
+
+st.write("\n\n\n")
 
 for index, todo in enumerate(todos):
     checkbox = st.checkbox(todo, key=todo)
@@ -25,10 +30,6 @@ for index, todo in enumerate(todos):
 
 st.text_input(label="", placeholder="Add a new task...",
               on_change=add_todo, key="new_todo")
-
-st.write("\n\n\n")
-st.image("foxy_icon.PNG")
-st.write("\n\n\n")
 
 if st.button("Generate a random foxy quote", key="quote"):
     fox_quote = st.empty()

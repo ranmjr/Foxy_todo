@@ -5,11 +5,13 @@ import functions
 
 todos = functions.get_todos()
 
+
 def add_todo():
     todo = st.session_state["new_todo"] + "\n"
     todos.append(todo)
     functions.write_todos(todos)
     st.session_state["new_todo"] = ""
+
 
 st.image("foxy_icon.PNG")
 st.write("\n\n\n")
@@ -34,7 +36,7 @@ st.text_input(label="", placeholder="Add a new task...",
 st.write("\n\n\n")
 
 if st.button("Play the foxy tune", key="tune"):
-    st.audio("fox_todo.mp3")
+    st.audio("Fox_todo.mp3")
 
 st.write("\n\n\n")
 

@@ -34,7 +34,7 @@ st.text_input(label="", placeholder="Add a new task...",
 st.write("\n\n\n")
 
 if st.button("Play the foxy tune", key="tune"):
-    st.audio("fox_todo.mp3")
+    st.audio("Fox_todo.mp3")
 
 st.write("\n\n\n")
 

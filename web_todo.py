@@ -27,7 +27,7 @@ st.text_input(label="", placeholder="Add a new task...",
               on_change=add_todo, key="new_todo")
 
 st.write("\n\n\n")
-st.image("/Users/ranmjr/Documents/Python course/Course projects/Foxy_todo/foxy_icon.PNG")
+st.image("foxy_icon.PNG")
 st.write("\n\n\n")
 
 if st.button("Generate a random foxy quote", key="quote"):
